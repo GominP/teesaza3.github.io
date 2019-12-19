@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title>Web Tech</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/tab.css">
+
+        <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        .column {
+          float: left;
+          width: 33.33%;
+          padding: 5px;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+        </style>
+
+
+    </head>
+    <body background="img/bg.jpg" style="background-repeat: no-repeat; background-size: auto;">
+        <div class="image">
+            <div class="hero-text">
+                    <h1 style="font-size:50px">My Best Friend </h1>
+                    <p>he's name ....</p>
+            </div>
+        </div>
+        
+        <span >
+            <marquee scrollamount="12" onmouseover="this.stop();" onmouseout="this.start();"> Hello This is first my website on Web-Tech class My name is Gomin Pawantao </marquee>
+        </span>
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'about-him')">About Him</button>
+          <button class="tablinks" onclick="openCity(event, 'Img')">Image</button>
+          <button class="tablinks" onclick="openCity(event, 'Author')">Author Info</button>
+        </div>
+
+        <div id="about-him" class="tabcontent">
+            <article>
+                <h1>He name is lone </h1>
+                <p>He has a four leg. He has a long tail. He has a whiskers. He so very cute when he walk straight to you and snuggle on you leg.Sometimes he walk around on you for signal.
+                Signal from him is you must to fullfil he's food. Because he feel hungry from play.
+                Someday He look don't care you.
+                </p>
+                
+                
+            </article>
+
+            <table width="400" border="2">
+              <tr>
+                <th align="left">Food</th>
+                <th align="left">Price (Baht)</th> 
+              </tr>
+              <tr>
+                <td>Whiskas</td>
+                <td>170</td>
+              </tr>
+              <tr>
+                <td>Me-O</td>
+                <td>150</td>
+              </tr>
+              <tr>
+                <td>Tuna</td>
+                <td>40</td>
+              </tr>
+            </table>
+
+            <p> What he is ?</p>
+            <div>
+                <input type="checkbox" >
+                <span class="checkmark"></span>
+                <label class="container">Dolphin</label>
+            </div>
+
+            <div>
+                <input type="checkbox" >
+                <span class="checkmark"></span>
+                <label class="container">Cat</label>
+            </div>
+
+            <div>
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                <label class="container">Alien</label>
+            </div>
+
+            <div>
+                <input type="checkbox" >
+                <span class="checkmark"></span>
+                <label class="container">Cockroach</label>
+            </div>
+            
+
+            
+        </div>
+
+        <div id="Img" class="tabcontent">
+          <h3>Image</h3>
+          <div class="row">
+          <div class="column">
+            <img src="img/img1.jpg" alt="lone1" width="450">
+          </div>
+          <div class="column">
+            <img src="img/img2.jpg" alt="lone2" style="width:100%">
+          </div>
+          <div class="column">
+            <img src="img/img3.jpg" alt="lone3" style="width:100%">
+          </div>
+        </div>
+        </div>
+
+        <div id="Author" class="tabcontent">
+            <center>
+                <img src="img/info.jpg" width="400" height="400" style="transform: rotate(90deg);">
+                <h2>Name: Gomin Pawantao</h2>
+                <h3>Number Student: 6110401561</h3>
+            </center>
+          
+
+        </div>
+
+        <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        </script>
+
+        
+    </body>
+</html>
