@@ -1,0 +1,54 @@
+$primary-color: #64485C;
+$secondary-color: white;
+$background-color: #8d60c0;
+
+
+
+
+body{
+    margin: 0em;
+    
+}
+.banner{
+    width: 100%;    
+}
+
+.bgimg{
+    background-image: url(img/bg1.jpeg);
+
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+  .inform{
+      background-color: $primary-color;
+  }
+  .card{
+      width: 20em;
+      margin: auto;
+  }
+
+  .bf{
+      text-align: center;
+  }
+
+  .first{
+      background-color: $primary-color;
+  }
+  .second{
+      background-color: $secondary-color;
+  }
+  .first , .second{
+      padding: 1.2em;
+  }
+
+
+
+
+
+  

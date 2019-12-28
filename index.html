@@ -1,128 +1,40 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    	<title>Web Tech</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/header.css">
-        <link rel="stylesheet" href="css/tab.css">
-
-        <style>
-        * {
-          box-sizing: border-box;
-        }
-
-        .column {
-          float: left;
-          width: 33.33%;
-          padding: 5px;
-        }
-
-        /* Clearfix (clear floats) */
-        .row::after {
-          content: "";
-          clear: both;
-          display: table;
-        }
-        </style>
-
-
-    </head>
-    <body background="img/bg.jpg" style="background-repeat: no-repeat; background-size: auto;">
-        <div class="image">
-            <div class="hero-text">
-                    <h1 style="font-size:50px">My Best Friend </h1>
-                    <p>he's name ....</p>
-            </div>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="public/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/56e49317d8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="public/css/app.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Harajuku</title>
+</head>
+<body>
+  <div>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark img-fluid banner" alt="Responsive image">
+      
+      <a class="navbar-brand">Harajuku</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="best_friend.html">Best Friend</a>
+          <a class="nav-item nav-link" href="css_zengarden.html">CSS Zengarden</a>
+          <a class="nav-item nav-link" href="specific.html">Specificity</a>
         </div>
-        
-        <span >
-            <marquee scrollamount="12" onmouseover="this.stop();" onmouseout="this.start();"> Hello This is first my website on Web-Tech class My name is Gomin Pawantao </marquee>
-        </span>
-        <div class="tab">
-          <button class="tablinks" onclick="openCity(event, 'about-him')">About Him</button>
-          <button class="tablinks" onclick="openCity(event, 'Img')">Image</button>
-          <button class="tablinks" onclick="openCity(event, 'Author')">Author Info</button>
-        </div>
+      </div>
+    </nav>
+    <div>
+      <img src="img/bgTest.jpg" class="banner ">
+      <div class="centered">
+        <div style="margin-left: 7em;">Hey,I'm</div>
+        <h1>Gomin Pawantao</h1>
+      </div>
+    </div>
+  </div>
 
-        <div id="about-him" class="tabcontent">
-            <article>
-                <h1>He name is lone </h1>
-                <p>He has a four leg. He has a long tail. He has a whiskers. He so very cute when he walk straight to you and snuggle on you leg.Sometimes he walk around on you for signal.
-                Signal from him is you must to fullfil he's food. Because he feel hungry from play.
-                Someday He look don't care you.
-                </p>
-                <p> What he is ?</p>
-                
-            </article>
-            <div>
-                <input type="checkbox" >
-                <span class="checkmark"></span>
-                <label class="container">Dolphin</label>
-            </div>
-
-            <div>
-                <input type="checkbox" >
-                <span class="checkmark"></span>
-                <label class="container">Cat</label>
-            </div>
-
-            <div>
-                <input type="checkbox">
-                <span class="checkmark"></span>
-                <label class="container">Alien</label>
-            </div>
-
-            <div>
-                <input type="checkbox" >
-                <span class="checkmark"></span>
-                <label class="container">Cockroach</label>
-            </div>
-            
-
-            
-        </div>
-
-        <div id="Img" class="tabcontent">
-          <h3>Image</h3>
-          <div class="row">
-          <div class="column">
-            <img src="img/img1.jpg" alt="lone1" width="450">
-          </div>
-          <div class="column">
-            <img src="img/img2.jpg" alt="lone2" style="width:100%">
-          </div>
-          <div class="column">
-            <img src="img/img3.jpg" alt="lone3" style="width:100%">
-          </div>
-        </div>
-        </div>
-
-        <div id="Author" class="tabcontent">
-            <center>
-                <img src="img/info.jpg" width="400" height="400" style="transform: rotate(90deg);">
-                <h2>Name: Gomin Pawantao</h2>
-                <h3>Number Student: 6110401561</h3>
-            </center>
-          
-
-        </div>
-
-        <script>
-        function openCity(evt, cityName) {
-          var i, tabcontent, tablinks;
-          tabcontent = document.getElementsByClassName("tabcontent");
-          for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-          }
-          tablinks = document.getElementsByClassName("tablinks");
-          for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-          }
-          document.getElementById(cityName).style.display = "block";
-          evt.currentTarget.className += " active";
-        }
-        </script>
-
-        
-    </body>
+  
+</body>
 </html>

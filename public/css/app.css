@@ -1,0 +1,46 @@
+body {
+  margin: 0em;
+}
+
+.banner {
+  width: 100%;
+}
+
+.bgimg {
+  background-image: url(img/bg1.jpeg);
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.inform {
+  background-color: #64485C;
+}
+
+.card {
+  width: 20em;
+  margin: auto;
+}
+
+.bf {
+  text-align: center;
+}
+
+.first {
+  background-color: #64485C;
+}
+
+.second {
+  background-color: white;
+}
+
+.first, .second {
+  padding: 1.2em;
+}
+
+/*# sourceMappingURL=app.css.map */
