@@ -2,31 +2,93 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="public/bootstrap-4.4.1-dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="public/css/app.css">
+  <link rel="stylesheet" href="public/css/specific.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <title>Harajuku</title>
 </head>
 <body>
-  <div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark img-fluid banner" alt="Responsive image">
+      
       <a class="navbar-brand">Harajuku</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active" href="index.html">Home </a>
+          <a class="nav-item nav-link" href="best_friend.html">Best Friend</a>
           <a class="nav-item nav-link" href="css.html">CSS Zengarden</a>
           <a class="nav-item nav-link" href="specific.html">Specificity</a>
         </div>
       </div>
     </nav>
-    <h1>2</h1>
+  <div>
+      
+  <div class="container-fluid text-center">    
+    <div class="row content">
+      <div class="col-sm-2 ">
+      </div>
+      <div class="col-sm-8 text-left " id="head"> 
+        <h1>CSS specific ?</h1>
+        <p>Css Specificity คือค่าบางอย่างที่จะจะบอก browser ว่าให้เลือกใช้ Style ตัวไหนมาแสดงผลหน้าเว็บ แน่นอนว่าจะต้องมีการคำนวนค่าออกมาเพื่อให้ browser รู้ได้นั่นเอง</p>
+        <h1>การคำนวณหาค่า Specific</h1>
+        <p>เราสามารถสร้าง style ให้กับ element ได้หลายแบบ ที่นิยมจะเป็นการเขียนแบบใช้ selector ครับ ซึ่งการเขียนแบบนี้ก็มีหลายแบบอีก เช่น</p>
+        <div class="list-group">
+          <a  class="list-group-item list-group-item-active">Type selectors คือการใช้ element เป็น selector เช่น h1, input, image</a>
+          <a class="list-group-item list-group-item-primary">Class selectors อันนี้รู้จักกันดี เช่น .container, .wrapper</a>
+          <a class="list-group-item list-group-item-secondary">ID selectors ใช้ id เป็น selector เช่น #name, #profile</a>
+          <a  class="list-group-item list-group-item-success">Attributes selectors เช่น [type=“radio”]</a>
+          <a class="list-group-item list-group-item-danger">Pseudo-classes เช่น :hover, :active</a>
+          <a class="list-group-item list-group-item-warning">และอื่นๆอีกมากมาย เช่น Universal selector ( * ), combinators ( +, >, ~, ' ' ), Negation pseudo-class ( :not() ), pseudo-elements ( ::before )</a>
+        </div>
+        <img src="img/example.png" class="center" alt="">
+        <p>โดยการคำนวณ specific จะมองค่าดังรูปนะครับ ก็คือ (0,0,0,0) ยกตัวอย่างเช่น</p>
+        <h3>Style attribute</h3>
+        <p>จะมีค่าเป็น (1,0,0,0)</p>
+        <p> <img src="img/example1.png" ></p>
+        <h3>ID</h3>
+        <p>จะมีค่าเป็น (0,1,0,0)</p>
+        <p> <img src="img/example2.png" ></p>
+        <h3>Class,Pseudo-classes</h3>
+        <p>จะมีค่าเป็น (0,0,1,0)</p>
+        <p> <img src="img/example3.png" ></p>
+        <h3>Elements</h3>
+        <p>จะมีค่าเป็น (0,0,0,1)</p>
+        <p> <img src="img/example4.png" ></p>
+        <hr>
+
+        <p>ซึ่งการทำงานของ specific นั้นจะทำงานเมื่อมีค่ามากกว่า ยกตัวอย่างเช่น specific ที่มีค่า (1,0,1,0) กับ (1,0,0,1) specific จะคำนวณแล้วทำงานของ (1,0,1,0)</p>
+        
+      </div>
+
+    </div>
+      
+  </div>
+  <div class="container ">
+    <hr>
+    <h3>Credit :
+      <a class="credit" href="https://medium.com/@thanuphon18/css-specificity-%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%87%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B9%86-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AB%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%99%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%80%E0%B8%84%E0%B8%A2%E0%B8%A3%E0%B8%B9%E0%B9%89-f23a0bf5ae87"> 
+        Ai2M Thanu
+      </a>
+      <a class="credit" href="https://medium.com/@thanuphon18/css-specificity-%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%87%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B9%86-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AB%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%99%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%80%E0%B8%84%E0%B8%A2%E0%B8%A3%E0%B8%B9%E0%B9%89-f23a0bf5ae87">
+        Emma Bostian
+      </a>
+    </h3>
 
   </div>
 
   
+
+    
+
+  
 </body>
 </html>
+
+
+
