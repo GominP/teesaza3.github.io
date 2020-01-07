@@ -14,7 +14,7 @@
     <script src="public/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
   <title>Random Prize</title>
 </head>
-<body>
+<body style="background-image: url(img/bg1.jpeg);">
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark img-fluid banner" alt="Responsive image">
       
       <a class="navbar-brand">Harajuku</a>
@@ -48,7 +48,7 @@
                 <div class="input-group mb-3">
                     <input type="text" class=" input-name"  placeholder="Username"  aria-describedby="button-addon2" id="username">
                     <div class="input-group-append">
-                      <button class="btn btn btn-outline-success" type="button" onclick="btnAddName()">Add</button>
+                      <button class="btn btn btn-outline-success" type="button" onclick="btnAddName()" >Add</button>
                     </div>
                 </div>
                 <div >
@@ -67,21 +67,21 @@
     </div>
 
     <div class="input-group-append btnRandom justify-content-center">
-        <button class="btn btn btn-outline-danger" type="button" data-toggle="modal" data-target="#exampleModalCenter" onclick="rndOnClick()">Random Prize</button>
+        <button class="btn btn btn-outline-danger btn-lg" type="button" data-toggle="modal" data-target="#exampleModalCenter" onclick="btnRandom()">Random Prize</button>
     </div>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header text-center">
             <h5 class="modal-title" id="exampleModalLongTitle">Reward Prize</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             </div>
             <div class="modal-body">
-            <p id="luckyName" class="lucky-name"></p>
+            <p id="RewardName" class="lucky-name"></p>
             </div>
             <div class="modal-footer">
             <button type="button reset" class="btn btn-secondary" data-dismiss="modal"  value="Reset">Close</button>

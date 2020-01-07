@@ -46,62 +46,96 @@ $('#myModal').on('shown.bs.modal', function () {
 })
 
 
-let guessName = [];
+let arrayName = [];
 let numBuffer = [];
-let luckyName = [];
+let rewardName = [];
 function btnAddName() {
+    // let name = document.getElementById("username").value;
+    // if(arrayName.length <= 0){
+    //     arrayName.push(document.getElementById("username").value);
+    //     document.getElementById("guess-name").innerHTML = "";
+    //     arrayName.forEach(printAllGuess);
+    //     document.getElementById("username").value = "";
+
+    // }
+    // else{
+    //     for (let index = 0; index < arrayName.length; index++) {
+    //         if (document.getElementById("username").value == "") {
+    //             window.alert("Please input Username");
+    //             break
+    //         }
+    //         else if(document.getElementById("username").value == arrayName[index]){
+    //             window.alert("Exist already Username");
+    //             break
+    //         }
+    //         else {
+    //             arrayName.push(document.getElementById("username").value);
+    //             document.getElementById("guess-name").innerHTML = "";
+    //             arrayName.forEach(printAllGuess);
+    //             document.getElementById("username").value = "";
+    //             break;
+    //         }
+    //         break;
+    //     }
+    // }
+
+
     if (document.getElementById("username").value == "") {
-        alert("กรุณากรอกชื่อผู้เข้าร่วมงาน");
+        window.alert("Please input Username");
     }
+
     else {
-        guessName.push(document.getElementById("username").value);
+        arrayName.push(document.getElementById("username").value);
         document.getElementById("guess-name").innerHTML = "";
-        guessName.forEach(printAllGuess);
+        arrayName.forEach(printAllGuess);
         document.getElementById("username").value = "";
     }
 }
 function printAllGuess(item, index) {
     document.getElementById("guess-name").innerHTML += (index + 1) + " : " + item + "<br>";
 }
-function rndOnClick() {
-    numBuffer = [];
-    luckyName = [];
-    if (guessName.length == 0) {
-        alert("ไม่มีผู้ร่วมงาน");
+function btnRandom() {
+    // numBuffer = [];
+    // rewardName = [];
+    if (arrayName.length == 0) {
+        alert("There are no participants.");
     }
     if (document.getElementById("piece").value == 0) {
-        alert("กรุณาใส่จำนวนของรางวัล");
+        alert("Please input your reward");
+        
+        
     }
     else {
         for (i = 0 ; i < document.getElementById("piece").value ; i++) {
-            if ( i == guessName.length) {
+            if ( i == arrayName.length) {
                 break;
             }
-            let temp = Math.floor(Math.random() * guessName.length);
+            let temp = Math.floor(Math.random() * arrayName.length);
             if (numBuffer.includes(temp)) {
                 while (numBuffer.includes(temp)) {
-                    temp = Math.floor(Math.random() * guessName.length);
+                    temp = Math.floor(Math.random() * arrayName.length);
                 }
                 numBuffer.push(temp);
-                luckyName.push(guessName[temp]);
+                rewardName.push(arrayName[temp]);
             }
             else {
                 numBuffer.push(temp);
-                luckyName.push(guessName[temp]);
+                rewardName.push(arrayName[temp]);
             }
         }
         console.log(numBuffer);
-        console.log(luckyName);
+        console.log(rewardName);
     }
-    document.getElementById("luckyName").innerHTML = "";
-    luckyName.forEach(printAllLuckyName);
+    document.getElementById("RewardName").innerHTML = "";
+    rewardName.forEach(showRewardUser);
 }
-function printAllLuckyName(item, index) {
+function showRewardUser(item, index) {
     if (index == 0) {
-        document.getElementById("luckyName").innerHTML += "Big Prize "+ " : " + item + "<br>";
+        document.getElementById("RewardName").innerHTML += "Big Prize "+ " : " + item + "<br>";
     }
     else{
-        document.getElementById("luckyName").innerHTML += "Reward " + (index) + " : " + item + "<br>";
+        document.getElementById("RewardName").innerHTML += "Reward " + (index) + " : " + item + "<br>";
     }
 }
+
 
