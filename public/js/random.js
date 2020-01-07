@@ -50,35 +50,6 @@ let arrayName = [];
 let numBuffer = [];
 let rewardName = [];
 function btnAddName() {
-    // let name = document.getElementById("username").value;
-    // if(arrayName.length <= 0){
-    //     arrayName.push(document.getElementById("username").value);
-    //     document.getElementById("guess-name").innerHTML = "";
-    //     arrayName.forEach(printAllGuess);
-    //     document.getElementById("username").value = "";
-
-    // }
-    // else{
-    //     for (let index = 0; index < arrayName.length; index++) {
-    //         if (document.getElementById("username").value == "") {
-    //             window.alert("Please input Username");
-    //             break
-    //         }
-    //         else if(document.getElementById("username").value == arrayName[index]){
-    //             window.alert("Exist already Username");
-    //             break
-    //         }
-    //         else {
-    //             arrayName.push(document.getElementById("username").value);
-    //             document.getElementById("guess-name").innerHTML = "";
-    //             arrayName.forEach(printAllGuess);
-    //             document.getElementById("username").value = "";
-    //             break;
-    //         }
-    //         break;
-    //     }
-    // }
-
 
     if (document.getElementById("username").value == "") {
         window.alert("Please input Username");
