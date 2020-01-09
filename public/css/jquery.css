@@ -1,0 +1,44 @@
+body, html {
+    height: 100%;
+  }
+  .bg {
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+header{
+    padding: 4em;
+    padding-bottom: 2em;
+}
+
+body{
+    font-family: 'Kulim Park', sans-serif;
+
+}
+.input-name{
+    width: 50%;
+
+}
+.input-number {
+    width: 10%;
+ 
+}
+
+.btnRandom{
+    padding: 3em;
+    
+
+}
+
+.modal-content {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
