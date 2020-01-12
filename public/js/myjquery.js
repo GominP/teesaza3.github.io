@@ -43,18 +43,41 @@ $(document).ready(function(){
     console.log("on")
     $("#addList").click(function (){
         console.log("click")
-        if (document.getElementById("username").value == "") {
-            window.alert("Please input Username");
+        if(document.getElementById("username").value == ""){
+            alert("Please input Username.");
         }
-        else {
-            arrayName.push(document.getElementById("username").value);
-            document.getElementById("guess-name").innerHTML = "";
-            arrayName.forEach(printAllGuess);
-            $("#username").val("");
+        else if(arrayName.length == 0){
+            addUserToArry();
 
-        }        
+        }
+        else{
+            for (let index = 0; index <= arrayName.length; index++) {
+                console.log("s")
+                const name = arrayName[index];
+                if(name == document.getElementById("username").value){
+                    console.log("if")
+                    alert("This user already exist.");
+                    break;
+                }
+                else{
+                    addUserToArry();
+                    break;
+    
+                }
+            }
+
+        }
+
 
     });
+
+    function addUserToArry(){
+        arrayName.push(document.getElementById("username").value);
+        document.getElementById("guess-name").innerHTML = "";
+        arrayName.forEach(printAllGuess);
+        $("#username").val("");
+        
+    }
 
     function printAllGuess(item, index) {
         document.getElementById("guess-name").innerHTML += (index + 1) + " : " + item + "<br>";
